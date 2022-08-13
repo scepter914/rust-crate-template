@@ -18,12 +18,12 @@ rename -s "package_name" "$snake_case_package_name" (fd -t d)
 rename -s "package_name" "$snake_case_package_name" (fd -t f --exclude "*.fish")
 
 if set -q _flag_clean
-  mv $script_dir/PACKAGE_README.md $script_dir/README.md
+  mv $script_dir/CRATE_README.md $script_dir/README.md
   rm -rf $script_dir/.git
   rm $script_dir/setup.fish
 else
   echo -n "Please run the following commands manually to clean up the package.
-  mv $script_dir/PACKAGE_README.md $script_dir/README.md
+  mv $script_dir/CRATE_README.md $script_dir/README.md
   rm $script_dir/setup.fish
   rm -rf $script_dir/.git # When you add this to an existing repository
 "
