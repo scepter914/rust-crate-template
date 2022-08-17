@@ -1,16 +1,17 @@
 use std::fs::File;
 use std::io::Read;
 
-use carrot_utils::logger::Logger;
+use carrot_utils::logger;
 use clap::Parser;
 use log::LevelFilter;
 use serde_derive::Deserialize;
 
 #[derive(Parser, Debug)]
 struct Args {
-    /// Name of the person to greet
     #[clap(short = 'c', long = "config_path")]
     config_path: String,
+    #[clap(short = 'l', long = "log_level", default_value = "Info")]
+    log_level: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -33,7 +34,10 @@ fn main() {
     println!("{:#?}", config);
     println!("{}", config.param_1);
 
-    let logger = Logger::new(
+    // set logger
+    let log_level = logger::get_log_level(&args.log_level);
+
+    let logger = logger::Logger::new(
         "./data/{TIME_SEC}",
         "log_{TIME_SEC}.txt",
         LevelFilter::Debug,
