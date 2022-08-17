@@ -3,7 +3,7 @@ use std::io::Read;
 
 use carrot_utils::logger;
 use clap::Parser;
-use log::LevelFilter;
+use log::{Level, LevelFilter};
 use serde_derive::Deserialize;
 
 #[derive(Parser, Debug)]
@@ -35,12 +35,11 @@ fn main() {
     println!("{}", config.param_1);
 
     // set logger
-    let log_level = logger::get_log_level(&args.log_level);
-
+    let log_level: LevelFilter = logger::get_log_level(&args.log_level);
     let logger = logger::Logger::new(
         "./data/{TIME_SEC}",
         "log_{TIME_SEC}.txt",
-        LevelFilter::Debug,
-        LevelFilter::Debug,
+        log_level,
+        log_level,
     );
 }
