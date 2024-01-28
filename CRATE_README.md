@@ -11,7 +11,7 @@
 
 ## History
 
-- Next release
+- For next release
 - v0.1.0
   - Published `crate_name` crate
 
