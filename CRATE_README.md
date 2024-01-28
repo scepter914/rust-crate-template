@@ -1,9 +1,9 @@
 # crate_name
 
 - Supported feature
-  - [ x ]
+  - [x] Supported feature 
 - Document
-  - [crates.io](https://crates.io/crate_name)
+  - [crates.io](https://crates.io/crates/crate_name)
   - [docs.rs](https://docs.rs/crate_name)
 
 ## Get started
@@ -11,5 +11,7 @@
 
 ## History
 
+- Next release
 - v0.1.0
-  - Published initial library
+  - Published `crate_name` crate
+

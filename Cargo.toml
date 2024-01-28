@@ -2,14 +2,16 @@
 name = "crate_name"
 version = "0.1.0"
 edition = "2021"
+
+license = "MIT"
 description = "Rust crate tempate"
 authors = ["scepter914 <scepter914@gmail.com>"]
-repository = "https://github.com/scepter914/crate_name"
-license = "MIT"
 readme = "README.md"
-publish = false
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+documentation = "https://docs.rs/crate_name"
+repository = "https://github.com/scepter914/crate_name"
+categories = ["", ""]
+publish = false
 
 [dependencies]
 carrot_utils = "0.1.3"
