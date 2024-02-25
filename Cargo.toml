@@ -6,12 +6,14 @@ edition = "2021"
 license = "MIT"
 description = "crate_name"
 authors = ["scepter914 <scepter914@gmail.com>"]
-readme = "README.md"
 
+readme = "README.md"
 documentation = "https://docs.rs/crate_name"
 repository = "https://github.com/scepter914/crate_name"
 categories = [""]
 keywords = ["", ""]
+
+exclude = ["data/*"]
 publish = false
 
 [dependencies]
